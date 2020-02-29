@@ -1,0 +1,4 @@
+run
+*.swp
+go_upload_dev
+go_upload

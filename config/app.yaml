@@ -1,0 +1,3 @@
+appName: go_upload
+listen: :9601
+appVersion: 0.0.1

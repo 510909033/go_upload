@@ -1,0 +1,15 @@
+stdout:
+  enable: true
+  categories:
+    - "*"
+  logLevel: debug
+  logType: stdout
+online:
+  enable: true
+  categories:
+    - "*"
+  logLevel: debug
+  logType: file
+  logFile: /opt/go/logs/gosearch.log
+  logFLag: 
+    - Llongfile

@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  go_upload:
+    image: centos:7.6.1810
+    ports:
+      - "9701:9601"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/www/go_upload/:/var/www/go_upload/:rw
+      - /opt/go/logs/:/opt/go/logs/:rw
+      - /vdb1/uploads/:/var/www/go_upload/public/uploads/:rw
+      - /vdb1/uploads/:/vdb1/uploads/:rw
+    env_file: ${go_env_file}
+    command: /var/www/go_upload/go_upload
+    container_name: go_upload
