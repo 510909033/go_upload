@@ -6,7 +6,7 @@ build:
 	go mod tidy
 dev: build
 	go build --ldflags "-extldflags -static" -o go_upload_dev cmd/main/main.go
-	nohup ./go_upload_dev > /dev/null 2>&1 &
+	./go_upload_dev 
 online: run
 # 自动提示
 # 要在vim中自动提示，请先运行make autocompletor
