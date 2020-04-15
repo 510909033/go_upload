@@ -25,3 +25,9 @@ run: build
 	cp -r template /var/www/go_upload/
 	nohup docker-compose -f ./docker/docker-compose.yml up > /dev/null 2>&1 &
 
+goget:
+	go get github.com/510909033/bgf_bo@master
+	go get github.com/510909033/bgf_database@master
+	go get github.com/510909033/bgf_log@master
+	go get github.com/510909033/bgf_mvc@master
+	go get github.com/510909033/bgf_util@master
