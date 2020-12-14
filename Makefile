@@ -13,6 +13,8 @@ online: run
 autocompletor:
 	go install ./pkg/...
 
+stop:
+	ps aux|grep "go_upload_dev"|grep -v grep|awk '{print $$2}'|xargs kill
 # 开发环境运行
 run: build
 	go build --ldflags "-extldflags -static" -o go_upload cmd/main/main.go
